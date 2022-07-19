@@ -13,6 +13,7 @@ Compiler Features:
 
 Bugfixes:
  * Commandline Interface: Disallow the following options outside of the compiler mode: ``--via-ir``,``--metadata-literal``, ``--metadata-hash``, ``--model-checker-show-unproved``, ``--model-checker-div-mod-no-slacks``, ``--model-checker-engine``, ``--model-checker-invariants``, ``--model-checker-solvers``, ``--model-checker-timeout``, ``--model-checker-contracts``, ``--model-checker-targets``.
+ * Code Generation: Fix faulty cleanup for some situations when abi-encoding static calldata arrays together with other types.
 
 
 ### 0.8.15 (2022-06-15)

@@ -498,7 +498,7 @@ string ABIFunctions::abiEncodingFunctionCalldataArrayWithoutCleanup(
 				);
 			templ("readableTypeNameFrom", _from.toString(true));
 			templ("readableTypeNameTo", _to.toString(true));
-			templ("copyFun", m_utils.copyToMemoryFunction(true));
+			templ("copyFun", m_utils.copyToMemoryFunction(true, false));
 			templ("lengthPadded", needsPadding ? m_utils.roundUpFunction() + "(length)" : "length");
 			return templ.render();
 		}
@@ -514,7 +514,7 @@ string ABIFunctions::abiEncodingFunctionCalldataArrayWithoutCleanup(
 			templ("functionName", functionName);
 			templ("readableTypeNameFrom", _from.toString(true));
 			templ("readableTypeNameTo", _to.toString(true));
-			templ("copyFun", m_utils.copyToMemoryFunction(true));
+			templ("copyFun", m_utils.copyToMemoryFunction(true, false));
 			templ("byteLength", toCompactHexWithPrefix(fromArrayType.length() * fromArrayType.calldataStride()));
 			return templ.render();
 		}
